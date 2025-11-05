@@ -1,0 +1,14 @@
+1.	Сериализация и десериализация. Pickle
+import pickle
+
+data = {"имя": "Иван", "возраст": 30}
+
+# Сохранение
+with open("data.pkl", "wb") as f:
+    pickle.dump(data, f)
+
+# Загрузка
+with open("data.pkl", "rb") as f:
+    new_data = pickle.load(f)
+
+print(new_data)
