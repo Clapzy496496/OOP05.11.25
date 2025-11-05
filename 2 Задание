@@ -1,0 +1,27 @@
+#2.	Спроектировать классы: Преподаватель, Группа, Дисциплина, Занятие, Журнал занятий. Построить диаграмму классов.
+class Teacher:
+    def __init__(self, name):
+        self.name = name
+
+class Discipline:
+    def __init__(self, name):
+        self.name = name
+
+class Group:
+    def __init__(self, name):
+        self.name = name
+
+class Lesson:
+    def __init__(self, date, teacher, discipline, group, hours):
+        self.date = date
+        self.teacher = teacher
+        self.discipline = discipline
+        self.group = group
+        self.hours = hours
+
+class Journal:
+    def __init__(self):
+        self.lessons = []
+
+    def add(self, lesson):
+        self.lessons.append(lesson)
